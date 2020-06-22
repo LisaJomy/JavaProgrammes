@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <test thread-count="2" name="Firefox test(failed)" parallel="tests">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="myTests.ERPTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="classicCRMTest"/>
+          <include name="terminate"/>
+          <include name="hubSpotTest"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- myTests.ERPTest -->
+      <class name="myTests.SocialMediaTest">
+        <methods>
+          <include name="googleTest"/>
+          <include name="setUp"/>
+          <include name="terminate"/>
+          <include name="facebookTest"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- myTests.SocialMediaTest -->
+    </classes>
+  </test> <!-- Firefox test(failed) -->
+  <test thread-count="2" name="Chrome Test(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="myTests.ERPTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="classicCRMTest"/>
+          <include name="terminate"/>
+          <include name="hubSpotTest"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- myTests.ERPTest -->
+      <class name="myTests.SocialMediaTest">
+        <methods>
+          <include name="googleTest"/>
+          <include name="setUp"/>
+          <include name="terminate"/>
+          <include name="facebookTest"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- myTests.SocialMediaTest -->
+    </classes>
+  </test> <!-- Chrome Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
